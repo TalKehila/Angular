@@ -1,0 +1,4 @@
+<div *ngFor="let movie of movies">
+<app-movie-component  [myMovie]="movie"></app-movie-component>
+</div>
+<app-add-movie (addMovie)="addNewMovie($event)"></app-add-movie>

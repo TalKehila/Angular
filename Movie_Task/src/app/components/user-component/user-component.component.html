@@ -1,0 +1,88 @@
+<!-- showing from get method -->
+<div *ngFor="let user of users">
+  <p>{{user.firstName}}</p>
+  <p>{{user.username}}</p>
+  <p>{{user.email}}</p>
+  <p>{{user.password}}</p>
+  <button (click)="DeleteUser(user.id)"> Delete</button>
+  
+
+  <p>Update your Details in One click</p>
+  Change User Name: <input type="text" [(ngModel)]="user.username" /><br>
+  Change Password: <input type="text" [(ngModel)]="user.password" /><br>
+  Change First Name: <input type="text" [(ngModel)]="user.firstName" /><br>
+  Change Email: <input type="text" [(ngModel)]="user.email" /><br> 
+  <button (click)="UpdateUser(user.id)">Update User</button>
+  <hr>
+</div>
+<div>
+  <app-add-user (add)="AddNewUser($event)"></app-add-user>
+</div>
+
+<!-- <p>Update your Details in One click</p>
+Change User Name: <input type="text" #username /><br>
+Change Password: <input type="password" #password /><br>
+Change First Name: <input type="text" #firstName /><br>
+Change Email: <input type="email" #email /><br> 
+<button (click)="UpdateUser(user.id)">
+  Update User
+</button>
+<hr>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div>
+  <hr>
+  <h1>User Page Details</h1>
+  <p>User Name: {{myuser.username}}</p>
+  <p>Password: {{myuser.password}}</p>
+  <p>First Name: {{myuser.firstName}}</p>
+  <p>Email: {{myuser.email}}</p>
+</div>
+ <p><button (click)="deleteme()">Delete User</button></p>
+ 
+ <p><button (click)="duplicateme()">Depulicate User</button></p>
+
+ <div>
+    <p>Update your Details in One click</p>
+    Change User Name:<input #username [value]="myuser.username" /><br>
+    Change Password :<input #password [value]="myuser.password" /><br>
+    Change First Name:<input #firstName [value]="myuser.firstName"/><br>
+    Change Email: <input #email [value]="myuser.email" /><br> 
+ <p> <button (click)="update(firstName.value,username.value,password.value,email.value)"> Update</button></p>
+</div>  -->

@@ -1,0 +1,35 @@
+<div>
+
+ <h1>Movie Name:{{myMovie.name}} </h1><br>
+ <h3>Year:{{myMovie.year}}</h3>
+ 
+<p>
+  Movie ID -{{myMovie.id}}
+</p>
+
+<p>
+ <img [src]="myMovie.image" width="200">
+</p>
+
+<div>
+ {{myMovie.description}}
+ <p></p>
+</div>
+<div [ngStyle]="{'color': myMovie.watched ? 'green' : 'red'}">
+    Did yo watch? {{myMovie.watched ? 'Yes' : 'No' }}
+     <button (click)="didWatch()">
+        {{myMovie.watched ? 'No' : 'Yes'}} <!-- logic for yes or no switch in the btn palce holder-->
+    </button>
+</div>
+
+<p>
+  <button (click)="EditDetails()">Click Here For Change Details</button>
+</p>
+
+<div *ngIf="showEditComponent">
+  <app-movie-editor [myMovie]="myMovie"></app-movie-editor> <!--   to make the edit work on the same details-->
+</div>
+
+<hr>
+</div>
+
