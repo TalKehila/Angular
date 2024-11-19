@@ -1,0 +1,94 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sercet Base</title>
+
+</head>
+<body>
+    <header>
+        <h2 class="logo"> </h2>
+        <nav class="navigation">
+          
+        </nav>
+    </header>
+   <div class="wrapper">
+    
+   
+    <div class="form-box login">
+        <h2 id="h2a">Login</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon">
+               
+                </span>
+                <label>User Name:</label>
+                <input type="email" required>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                                   
+                </span>
+                <label>Password :</label>
+                <input type="password" required>
+            </div>
+          
+            <button type="submit" class="btn">Login</button>
+            <div class="login-register">
+            </div>
+        </form>
+    </div>
+      <div class="form-box register">
+        <h2>Registaration</h2>
+        <form name="addNew" #addNewForm="ngForm">
+              <div class="input-box">
+                <span class="icon">
+                
+                </span>
+                <label>First Name:</label>
+                <input type="text"  name="FirstName" minlength="2">
+                 <div class="error" *ngIf="addNewForm.controls['FirstName'].invalid && addNewForm.controls['FirstName'].dirty"></div>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                 
+                </span>
+                <label>Last Name:</label>
+                <input type="txet" name="LastName" minlength="2">
+                 <div class="error" *ngIf="addNewForm.controls['LastName'].invalid && addNewForm.controls['LastName'].dirty"></div>
+
+            </div>
+            <div class="input-box">
+                <span class="icon">   
+
+                </span>
+                <label>User Name:</label>
+                <input type="text" name="UserName" minlength="2">
+                 <div class="error" *ngIf="addNewForm.controls['UserName'].invalid && addNewForm.controls['UserName'].dirty"></div>
+
+            </div>
+              <div class="input-box">
+                <span class="icon">   
+                  
+                </span>
+                <label>Password:</label>
+                <input type="password" name="password" minlength="8">
+                 <div class="error" *ngIf="addNewForm.controls['password'].invalid && addNewForm.controls['password'].dirty"></div>
+
+            </div>
+              <div class="input-box">
+                <span class="icon">               
+                </span>
+                <label>Email:</label>
+                <input type="email" name="email" >
+                 <div class="error" *ngIf="addNewForm.controls['email'].invalid && addNewForm.controls['email'].dirty"></div>
+
+            </div>        
+             <button type="submit" class="btn">Register</button> 
+        </form>
+    </div>
+</div>
+</body>
+</html>

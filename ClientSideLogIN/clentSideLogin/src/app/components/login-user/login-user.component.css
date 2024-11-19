@@ -1,0 +1,81 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items:  center;
+    min-height: 100vh;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Backgammon_lg.png/330px-Backgammon_lg.png') no-repeat;
+    background-size:cover ;
+    background-position: center;
+    animation: backgroundAnimation 20s infinite alternate;
+
+}
+@keyframes backgroundAnimation {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#h2a {
+    color: aqua;
+}
+
+*{
+margin :0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+.login-register{
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+ 
+
+.input-box input{
+    width:100% ;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 400;
+    padding: 0 35px 0 5px;
+
+
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+   
+}
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    border-bottom: 3px solid #162938;
+    margin:30px 0;   
+
+}
+
+
